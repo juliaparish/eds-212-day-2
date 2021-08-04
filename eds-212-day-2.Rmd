@@ -30,7 +30,7 @@ eval(expr = df_dx)
 ## Find the derivative expression and slope at the indicated value: P(a)=2(3a+2)^4 −5 at a=1.2
 ```{r}
 
-Pa <- expression(2* (3 * a + 2 )^4 − 5)
+Pa <- expression(2 * (3 * a + 2 )^4 - 5)
 
 df_da <- D(expr = Pa , name = 'a')
 
@@ -81,10 +81,28 @@ f(x,y,z)=2x^2^y−3x+1+4z^4^x
 ```{r}
 fxyz <- expression((2 * x^2 * y) - (3 * x) + 1 + (4 * z^4 * x))
 
+df_dx <- D(expr = fxyz , name = 'x')
+
+df_dy <- D(expr = fxyz , name = 'y')
+
+df_dz <- D(expr = fxyz , name = 'z')
 
 
 ```
 
+## Create a plot of the function f(x)=2.4e^−0.05x^sin(x) for x values from -0.5 to +0.5
+
+```{r}
+fx <- function(x) {
+  
+  2.4 * exp(-0.05)^x * sin(x)
+  
+}
+
+ggplot(data.frame(x = c(-0.5, 0.5)), aes(x = x)) + 
+  stat_function(fun = fx)
+
+```
 
 
 
