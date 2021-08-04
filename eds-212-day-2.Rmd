@@ -58,5 +58,23 @@ eval(expr = df_dt)
 
 ```
 
+## Back in RStudio, add a code chunk in your Rmd in which you find the second derivative with respect to z for G(z)=4.6−1.9z^3. Check your solution by hand.
+
+```{r}
+
+gz <- expression(4.6 - 1.9 * z^3)
+
+dg_dz <- D(expr = gz , name = 'z')
+
+dg_dz
+
+d2g_dz2 <- D(expr = dg_dz , name = 'z')
+
+d2g_dz2
+
+#-1.9 x 3 x 2 
+
+```
+
 
 
