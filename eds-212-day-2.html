@@ -207,8 +207,8 @@ df_dt</code></pre>
 eval(expr = df_dt)</code></pre>
 <pre><code>## [1] -4</code></pre>
 </div>
-<div id="back-in-rstudio-add-a-code-chunk-in-your-rmd-in-which-you-find-the-second-derivative-with-respect-to-z-for-gz4.61.9z3.-check-your-solution-by-hand." class="section level2">
-<h2>Back in RStudio, add a code chunk in your Rmd in which you find the second derivative with respect to z for G(z)=4.6−1.9z^3. Check your solution by hand.</h2>
+<div id="find-the-second-derivative-with-respect-to-z-for-gz4.61.9z3.-check-your-solution-by-hand." class="section level2">
+<h2>Find the second derivative with respect to z for G(z)=4.6−1.9z^3. Check your solution by hand.</h2>
 <pre class="r"><code>gz &lt;- expression(4.6 - 1.9 * z^3)
 
 dg_dz &lt;- D(expr = gz , name = &#39;z&#39;)
@@ -220,6 +220,11 @@ dg_dz</code></pre>
 d2g_dz2</code></pre>
 <pre><code>## -(1.9 * (3 * (2 * z)))</code></pre>
 <pre class="r"><code>#-1.9 x 3 x 2 </code></pre>
+</div>
+<div id="find-all-partials-of-the-following-function" class="section level2">
+<h2>find all partials of the following function:</h2>
+<p>f(x,y,z)=2x<sup>2</sup>y−3x+1+4z<sup>4</sup>x</p>
+<pre class="r"><code>fxyz &lt;- expression((2 * x^2 * y) - (3 * x) + 1 + (4 * z^4 * x))</code></pre>
 </div>
 </div>
 
